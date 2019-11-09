@@ -492,7 +492,7 @@ static int fileBrowserMenuCtrl() {
   }
 
   // SELECT button
-  if (pressed_pad[PAD_SELECT]) {
+  if (hold2_pad[PAD_LEFT_ANALOG_UP]) {
     if (vitashell_config.select_button == SELECT_BUTTON_MODE_USB &&
         sceKernelGetModel() == SCE_KERNEL_MODEL_VITA) {
       if (isSafeMode()) {
@@ -535,7 +535,7 @@ static int fileBrowserMenuCtrl() {
   }
 
   // Move
-  if (hold_pad[PAD_UP] || hold2_pad[PAD_LEFT_ANALOG_UP]) {
+  if (hold_pad[PAD_UP]) {
     int old_pos = base_pos + rel_pos;
 
     if (rel_pos > 0) {
